@@ -1,6 +1,7 @@
 #define URL route for index() view
 from django.urls import path
 from .views import MenuItemsView, SingleMenuItemView
+#from . import views
 
 urlpatterns = [
     #path('', views.index, name='index'),
