@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'restaurant',
     'rest_framework',
+    'djoser',
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
@@ -130,3 +132,15 @@ STATIC_URL = 'restaurant/static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES':[
+        'rest_framework.authentication.TokenAuthentication', # to put the token acces 
+        'rest_framework.authentication.SessionAuthentication', # Djoser
+    ]
+}
+
+DJOSER={"USER_ID_FIELD":"username"}
+
+AUTH_TOKEN_MODULE = 'rest_framework.authtoken'
+
