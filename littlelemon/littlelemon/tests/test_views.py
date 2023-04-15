@@ -2,8 +2,8 @@ from django.test import TestCase
 from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APIClient
-from .models import Menu
-from .serializers import MenuSerializer
+from restaurant.models import Menu
+from restaurant.serializers import MenuSerializer
 
 from rest_framework.authtoken.models import Token
 from django.contrib.auth.models import User
